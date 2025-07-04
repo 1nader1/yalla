@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yalla</title>
+    <link rel="icon" type="image/png" href="resorces/3DLogoLab (11) copy.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="yalla.css">
+    
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/5 backdrop-blur-md shadow-lg p-1">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <div class="text-2xl font-bold bg-sky-500/90 bg-clip-text text-transparent">
+                        <img src="resorces/3DLogoLab (11) copy.png" alt="Yalla Logo"
+                        class="yalla-logo-nav w-[40px] max-w-full mx-auto mb-1 drop-shadow-2xl position relative right-2">
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <!-- <nav class="hidden md:flex space-x-8" id="main-nav">
+                    <a href="#about" class="text-white hover:text-sky-500 transition duration-300" data-en="About" data-ar="عن التطبيق">About</a>
+                    <a href="#features" class="text-white hover:text-sky-500 transition duration-300" data-en="Features" data-ar="المميزات">Features</a>
+                    <a href="#information" class="text-white hover:text-sky-500 transition duration-300" data-en="Information" data-ar="المعلومات">Information</a>
+                    <a href="#future" class="text-white hover:text-sky-500 transition duration-300" data-en="Future" data-ar="المستقبل">Future</a>
+                </nav> -->
+                
+                <div class="hidden md:block">
+                    <button class="bg-sky-500 backdrop-blur-md shadow-lg px-4 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg hover:shadow-sky-500/90 transition-all duration-300 transform hover:scale-105" id="get-app-btn">
+                        Get the App
+                    </button>
+
+                    <div class="language-switcher">
+                        <button class="language-btn" id="language-btn">
+                            <span class="language-text">English</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="language-dropdown" id="language-dropdown">
+                            <div class="language-option" data-lang="en" data-dir="ltr">
+                                <span class="language-text">English</span>
+                            </div>
+                            <div class="language-option" data-lang="ar" data-dir="rtl">
+                                <span class="language-text">العربية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+                <div class="md:hidden">
+                    <button id="menu-btn" class="hamburger focus:outline-none">
+                        <span class="hamburger-top"></span>
+                        <span class="hamburger-middle"></span>
+                        <span class="hamburger-bottom"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="menu" class="md:hidden hidden">
+                <div class="absolute flex flex-col items-center py-8 mt-4 space-y-6 bg-dark border border-gray-800 rounded-lg left-6 right-6 drop-shadow-lg">
+                    <!-- <a href="#about" class="text-white hover:text-orange-400" data-en="About" data-ar="عن التطبيق">About</a>
+                    <a href="#features" class="text-white hover:text-orange-400" data-en="Features" data-ar="المميزات">Features</a>
+                    <a href="#information" class="text-white hover:text-orange-400" data-en="Information" data-ar="المعلومات">Information</a>
+                    <a href="#future" class="text-white hover:text-orange-400" data-en="Future" data-ar="المستقبل">Future</a> -->
+                    <button class="bg-gradient-to-r from-sky-900 via-sky-500 to-sky-900 text-white px-6 py-2 rounded-full font-medium" id="mobile-get-app-btn">
+                        Get the App
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-1 pointer-events-none">
+            <img src="resorces/yalla-bg2.jpg" alt="" class="w-full h-full object-cover">
+            <div id="hero-darken-layer" class="absolute inset-0 bg-black" style="opacity: 0.6;"></div>
+        </div>
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between hero-content">
+                <div class="container mx-auto px-6 relative z-10">
+                    <div class="flex flex-col items-center justify-center hero-content min-h-[90vh]">
+                        <div id="logo-container">
+                            <div id="logo-shadow"></div>
+                            <img src="resorces/3DLogoLab (11) copy.png" 
+                                alt="Yalla App Interface" 
+                                id="yalla-logo"
+                                class="select-none ">
+                        </div>
+
+                        <p class="text-lg font-bold md:text-xl text-sky-500 text-center mb-4" data-en="Your Place for special experience Coming Soon" data-ar="مكانك لتجربة استثنائية قريباً">
+                        </p>
+
+                        <h1 class="text-4xl md:text-6xl font-bold text-center mb-10" data-en="community for every Interest" data-ar="مجتمع لكل اهتمام">
+                        </h1>
+                        
+                        <button class="bg-sky-500 backdrop-blur-md shadow-lg px-4 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg hover:shadow-sky-500/90 transition-all duration-300 transform hover:scale-105" id="get-app-btn" data-en="Register your intrest" data-ar="سجل اهتمامك">
+                            Get the App
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sub-Hero CTA -->
+    <!-- <section class="py-16 bg-gradient-to-b from-dark to-gray-900">
+        <div class="container mx-auto px-6 text-center fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8" data-en="A new era of social connection with" data-ar="عصر جديد من التواصل الاجتماعي ">
+                A new era of social connection with <span class="bg-gradient-to-r from-orange-start to-orange-end bg-clip-text text-transparent" data-en="AI-powered matching" data-ar="التوصيل المدعوم بالذكاء الاصطناعي">AI-powered matching</span>
+            </h2>
+            <a href="#" class="inline-flex items-center text-orange-400 group mb-16">
+                <span class="mr-2 font-medium" data-en="Watch Video" data-ar="شاهد الفيديو">Watch Video</span>
+                <i class="fas fa-play-circle text-xl transform group-hover:translate-x-1 transition duration-300"></i>
+            </a>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="text-3xl font-bold text-orange-400 mb-2">3.3m</div>
+                    <div class="text-soft-gray" data-en="Downloads" data-ar="تحميلات">Downloads</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="text-3xl font-bold text-blue-highlight mb-2">23.5b+</div>
+                    <div class="text-soft-gray" data-en="Connections" data-ar="اتصالات">Connections</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="text-3xl font-bold text-orange-400 mb-2">4.8</div>
+                    <div class="text-soft-gray" data-en="Avg Rating" data-ar="متوسط التقييم">Avg Rating</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="text-3xl font-bold text-white mb-2">98%</div>
+                    <div class="text-soft-gray" data-en="Satisfied Users" data-ar="مستخدمين راضين">Satisfied Users</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- About Section -->
+    <!-- <section id="about" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 fade-in" data-en="Quick and easy connection with" data-ar="تواصل سريع وسهل مع">
+                Quick and easy connection with <span class="font-bold bg-gradient-to-r from-orange-start to-orange-end bg-clip-text text-transparent" data-en="like-minded people" data-ar="أشخاص متشابهين">like-minded people</span>
+            </h2>
+            
+            <div class="scroll-horizontal md:overflow-x-visible flex md:grid md:grid-cols-4 gap-6 pb-6 fade-in">
+
+                <div class="bg-white p-6 rounded-2xl w-80 md:w-auto flex-shrink-0 hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-bold text-dark mb-4" data-en="Modern interface" data-ar="واجهة حديثة">Modern interface</h3>
+                    <img src="https://cdn.dribbble.com/users/1787323/screenshots/11324473/media/7c0a39a1e6e520aff0b7e0f9e62b765b.png" 
+                         alt="App Screenshot" 
+                         class="rounded-lg shadow-md">
+                </div>
+                
+
+                <div class="relative bg-gradient-to-br from-orange-start to-orange-end p-6 rounded-2xl w-80 md:w-auto flex-shrink-0 hover:shadow-xl transition duration-300">
+                    <div class="wave-pattern"></div>
+                    <h3 class="text-xl font-bold text-white mb-4 relative z-10" data-en="AI-powered matching" data-ar="توصيل بالذكاء الاصطناعي">AI-powered matching</h3>
+                    <div class="relative z-10 flex justify-center">
+                        <div class="w-32 h-32 rounded-full bg-white/20 flex items-center justify-center">
+                            <i class="fas fa-microphone text-white text-4xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="glass-card p-6 rounded-2xl w-80 md:w-auto flex-shrink-0 hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-bold text-white mb-4" data-en="Group activities" data-ar="أنشطة جماعية">Group activities</h3>
+                    <img src="https://cdn.dribbble.com/users/1787323/screenshots/14159310/media/5b3c2d9a0a6a8a5d6b5e5a5f5e5a5d6.png" 
+                         alt="Group Activities" 
+                         class="rounded-lg">
+                </div>
+                
+
+                <div class="glass-card p-6 rounded-2xl w-80 md:w-auto flex-shrink-0 hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-bold text-white mb-4" data-en="Get Yalla Now" data-ar="احصل على يلا الآن">Get Yalla Now</h3>
+                    <div class="flex flex-col space-y-4 mt-8">
+                        <button class="bg-black text-white px-6 py-3 rounded-lg flex items-center justify-center hover:bg-gray-900 transition duration-300">
+                            <i class="fab fa-apple text-2xl mr-3"></i>
+                            <div class="text-left">
+                                <div class="text-xs" data-en="Download on the" data-ar="حمل من">Download on the</div>
+                                <div class="font-bold" data-en="App Store" data-ar="متجر التطبيقات">App Store</div>
+                            </div>
+                        </button>
+                        <button class="bg-black text-white px-6 py-3 rounded-lg flex items-center justify-center hover:bg-gray-900 transition duration-300">
+                            <i class="fab fa-google-play text-xl mr-3"></i>
+                            <div class="text-left">
+                                <div class="text-xs" data-en="Get it on" data-ar="احصل عليه من">Get it on</div>
+                                <div class="font-bold" data-en="Google Play" data-ar="جوجل بلاي">Google Play</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Features Section -->
+    <!-- <section id="features" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 fade-in" data-en="The main features of our app" data-ar="المميزات الرئيسية لتطبيقنا">
+                The main features of our app
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto fade-in">
+
+                <div class="relative overflow-hidden rounded-2xl feature-card h-64">
+                    <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Fast connections" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-blue-highlight/20"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold text-white" data-en="Fast connections" data-ar="اتصالات سريعة">Fast connections</h3>
+                    </div>
+                    <div class="feature-overlay absolute inset-0 flex items-center justify-center bg-black/70">
+                        <button class="bg-gradient-to-r from-orange-start to-orange-end text-white px-6 py-2 rounded-full font-medium" data-en="Try it" data-ar="جربه">
+                            Try it
+                        </button>
+                    </div>
+                </div>
+                
+
+                <div class="relative overflow-hidden rounded-2xl feature-card h-64">
+                    <img src="https://images.unsplash.com/photo-1607706189992-eae578626c86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="AI-powered matching" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-orange-start/20"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold text-white" data-en="AI-powered matching" data-ar="توصيل بالذكاء الاصطناعي">AI-powered matching</h3>
+                    </div>
+                    <div class="feature-overlay absolute inset-0 flex items-center justify-center bg-black/70">
+                        <button class="bg-gradient-to-r from-orange-start to-orange-end text-white px-6 py-2 rounded-full font-medium" data-en="Try it" data-ar="جربه">
+                            Try it
+                        </button>
+                    </div>
+                </div>
+                
+
+                <div class="relative overflow-hidden rounded-2xl feature-card h-64">
+                    <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Interest groups" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-orange-end/20"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold text-white" data-en="Interest groups" data-ar="مجموعات الاهتمامات">Interest groups</h3>
+                    </div>
+                    <div class="feature-overlay absolute inset-0 flex items-center justify-center bg-black/70">
+                        <button class="bg-gradient-to-r from-orange-start to-orange-end text-white px-6 py-2 rounded-full font-medium" data-en="Try it" data-ar="جربه">
+                            Try it
+                        </button>
+                    </div>
+                </div>
+                
+
+                <div class="relative overflow-hidden rounded-2xl feature-card h-64">
+                    <img src="https://images.unsplash.com/photo-1607706189992-eae578626c86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Local events" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-blue-highlight/20"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                        <h3 class="text-xl font-bold text-white" data-en="Local events" data-ar="فعاليات محلية">Local events</h3>
+                    </div>
+                    <div class="feature-overlay absolute inset-0 flex items-center justify-center bg-black/70">
+                        <button class="bg-gradient-to-r from-orange-start to-orange-end text-white px-6 py-2 rounded-full font-medium" data-en="Try it" data-ar="جربه">
+                            Try it
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- News and Updates -->
+    <!-- <section id="information" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 fade-in" data-en="News and Updates" data-ar="الأخبار والتحديثات">
+                News and Updates
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 fade-in">
+
+                <div class="glass-card p-6 rounded-2xl hover:shadow-xl transition duration-300">
+                    <div class="flex space-x-4 mb-4">
+                        <i class="fab fa-twitter text-blue-400 text-xl"></i>
+                        <i class="fab fa-facebook text-blue-600 text-xl"></i>
+                        <i class="fab fa-instagram text-pink-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2" data-en="New features" data-ar="ميزات جديدة">New features</h3>
+                    <p class="text-soft-gray" data-en="Discover our latest app features" data-ar="اكتشف أحدث ميزات التطبيق">Discover our latest app features</p>
+                </div>
+                
+
+                <div class="bg-gradient-to-br from-pink-500 to-orange-400 p-6 rounded-2xl hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-bold mb-2" data-en="New themes" data-ar="سمات جديدة">New themes</h3>
+                    <p class="text-white/90" data-en="Customize your app appearance" data-ar="خصص مظهر تطبيقك">Customize your app appearance</p>
+                    <button class="mt-4 bg-white text-dark px-4 py-1 rounded-full text-sm font-medium" data-en="Try it" data-ar="جربه">
+                        Try it
+                    </button>
+                </div>
+                
+
+                <div class="glass-card p-6 rounded-2xl hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-bold mb-2" data-en="Dark mode" data-ar="الوضع الليلي">Dark mode</h3>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-soft-gray" data-en="Dark Mode" data-ar="الوضع الليلي">Dark Mode</span>
+                        <div class="relative inline-block w-12 mr-2 align-middle select-none">
+                            <input type="checkbox" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                            <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="glass-card p-6 rounded-2xl hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-orange-400/20 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-star text-orange-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2" data-en="Favorites" data-ar="المفضلة">Favorites</h3>
+                    <p class="text-soft-gray mb-4" data-en="Quick access to favorites" data-ar="وصول سريع إلى المفضلة">Quick access to favorites</p>
+                    <button class="flex items-center text-orange-400 group">
+                        <span class="mr-2" data-en="Add to favorite" data-ar="أضف إلى المفضلة">Add to favorite</span>
+                        <i class="fas fa-plus text-sm"></i>
+                    </button>
+                </div>
+                
+
+                <div class="glass-card p-6 rounded-2xl border-2 border-dashed border-gray-700 hover:border-orange-400 transition duration-300 flex flex-col items-center justify-center">
+                    <i class="fas fa-plus text-3xl text-gray-500 mb-2"></i>
+                    <h3 class="text-xl font-bold" data-en="Coming Soon" data-ar="قريباً">Coming Soon</h3>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Future Section -->
+    <!-- <section id="future" class="py-20 bg-gradient-to-b from-gray-900 to-dark">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" data-en="The future of" data-ar="مستقبل">
+                    The future of <span class="bg-gradient-to-r from-orange-start to-orange-end bg-clip-text text-transparent" data-en="social connection" data-ar="التواصل الاجتماعي">social connection</span> is here
+                </h2>
+                <p class="text-xl text-soft-gray mb-10" data-en="Yalla is constantly evolving with new features to connect you with like-minded people." data-ar="تطبيق يلا يتطور باستمرار بميزات جديدة لربطك بأشخاص متشابهين في التفكير.">
+                    Yalla is constantly evolving with new features to connect you with like-minded people.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="bg-gradient-to-r from-orange-start to-orange-end text-white px-8 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-300" data-en="Get Started" data-ar="ابدأ الآن">
+                        Get Started
+                    </button>
+                    <button class="border border-gray-700 text-white px-8 py-3 rounded-full font-medium hover:border-orange-400 transition duration-300" data-en="Learn More" data-ar="تعلم المزيد">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="interest-form-section" class="py-20 bg-dark min-h-screen hidden">
+        <div class="container mx-auto px-6 flex flex-col items-center justify-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-white" 
+                data-en="Register Your Interest" 
+                data-ar="سجل اهتمامك">
+                Register Your Interest
+            </h2>
+            <form id="interest-form" class="w-full max-w-md bg-sky-500 rounded-2xl p-8 shadow-lg space-y-6">
+                <div>
+                    <label for="name" class="block text-soft-gray mb-2 font-medium" data-en="Name" data-ar="الاسم">Name</label>
+                    <input type="text" id="name" name="name" required 
+                        class="w-full px-4 py-2 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        data-en="Enter your name" data-ar="ادخل اسمك" placeholder="Enter your name">
+                </div>
+                <div>
+                    <label for="email" class="block text-soft-gray mb-2 font-medium" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                    <input type="email" id="email" name="email" required 
+                        class="w-full px-4 py-2 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        data-en="Enter your email" data-ar="ادخل بريدك الإلكتروني" placeholder="Enter your email">
+                </div>
+                <div>
+                    <label for="reason" class="block text-soft-gray mb-2 font-medium" data-en="Why are you interested?" data-ar="لماذا أنت مهتم؟">Why are you interested?</label>
+                    <textarea id="reason" name="reason" rows="3" required
+                        class="w-full px-4 py-2 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        data-en="Tell us why you're interested in Yalla" data-ar="أخبرنا لماذا أنت مهتم بتطبيق يلا" placeholder="Tell us why you're interested in Yalla"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-black text-white py-3 rounded-full font-bold text-lg hover:scale-105 transition" 
+                    data-en="Submit" data-ar="إرسال">
+                    Submit
+                </button>
+            </form>
+            <div id="form-success" class="hidden mt-6 text-green-400 font-bold text-center" data-en="Thank you for your interest!" data-ar="شكراً لاهتمامك!">
+                Thank you for your interest!
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-12 border-t border-gray-800">
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold bg-gradient-to-r from-orange-start to-orange-end bg-clip-text text-transparent mb-1">
+                        Yalla
+                    </div>
+                    <p class="text-soft-gray font-bold position relative bottom-9" data-en="Connect with people you" data-ar="تواصل مع ناس تشبهك">
+                        Connect with like-minded people
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4" data-en="Product" data-ar="المنتج">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-soft-gray hover:text-sky-500 transition duration-300" data-en="soon" data-ar="قريباً">Features</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4" data-en="Company" data-ar="الشركة">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-soft-gray hover:text-sky-500 transition duration-300" data-en="soon" data-ar="قريباً">About</a></li>
+                       
+                    </ul>
+                </div>
+                
+                <div>
+
+                    <p class="text-soft-gray text-sm font-bold">
+                        © 2025 Yalla <span data-en="All rights reserved" data-ar="جميع الحقوق محفوظة">All rights reserved</span>
+                    </p>
+
+                    <p class="text-soft-gray text-sm">
+                        <a href="" class="WEBLIXITY font-bold text-green-400"> <span data-en="DEVELOPED BY WEBLIXITY " data-ar="تم التطوير من WEBLIXITY">All rights reserved.</span></a>
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="anime.min.js"></script>
+    <script src="yalla.js" ></script>
+</body>
+</html>
